@@ -6,6 +6,8 @@ import { ReglementComponent } from './reglement/reglement.component';
 import { SecteurActiviteComponent } from './secteur-activite/secteur-activite.component';
 import { OperateurComponent } from './operateur/operateur.component';
 import { FactureComponent } from './facture/facture.component';
+import {SignupComponent} from "./signup/signup.component";
+import {LoginComponent} from "./login/login.component";
 
 
 const routes: Routes =[
@@ -15,6 +17,8 @@ const routes: Routes =[
   { path: 'product',  component: ProductsComponent },
   { path: 'stock',  component: StockComponent },
   { path: 'reglement',  component: ReglementComponent },
+  {path: 'register', component: SignupComponent},
+  {path: 'login', component: LoginComponent},
   {path: '', redirectTo: 'product', pathMatch: 'full'}
 ]
 

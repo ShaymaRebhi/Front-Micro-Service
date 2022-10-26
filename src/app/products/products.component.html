@@ -9,21 +9,19 @@
       <tr>
         <th>Id</th>
         <th>Code</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Create Date</th>
-        <th>Update Date</th>
+        <th>libelle</th>
+        <th>Prix Unitaire</th>
+        <th>numbre like</th>
         <th>Action</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor='let p of listProducts'>
         <td>{{p.idProduit}}</td>
-        <td>{{p.codeProduit}}</td>
-        <td>{{p.libelleProduit}}</td>
-        <td>{{p.prix}}</td>
-        <td>{{p.dateCreation}}</td>
-        <td>{{p.dateDerniereModification}}</td>
+        <td>{{p.code}}</td>
+        <td>{{p.libelle}}</td>
+        <td>{{p.prixUnitaire}}</td>
+        <td>{{p.nbrLike}}</td>
         <td>
           <button type="button" class="btn btn-outline-primary"
                   (click)="open(mymodal1,p)">Edit
@@ -50,35 +48,29 @@
         <label for="product-code">Product Code</label>
         <div class="input-group">
           <input id="Product-code" class="form-control" type="text" placeholder="Product Code"
-                 [(ngModel)]="product.codeProduit"
+                 [(ngModel)]="product.code"
                  [ngModelOptions]="{standalone : true}"></div>
       </div>
       <div class="mb-3">
         <label for="product-name">Product Name</label>
         <div class="input-group">
           <input id="Product-name" class="form-control" type="text" placeholder="Product Name"
-                 [(ngModel)]="product.libelleProduit"
+                 [(ngModel)]="product.libelle"
                  [ngModelOptions]="{standalone : true}"></div>
       </div>
       <div class="mb-3">
         <label for="product-prix">Product Price</label>
         <div class="input-group">
           <input id="Product-prix" class="form-control" type="number" placeholder="Product Price"
-                 [(ngModel)]="product.prix"
+                 [(ngModel)]="product.prixUnitaire"
                  [ngModelOptions]="{standalone : true}"></div>
       </div>
+
       <div class="mb-3">
-        <label for="product-cdate">Product Creation Date</label>
+        <label for="product-mdate">Number like</label>
         <div class="input-group">
-          <input id="Product-cdate" class="form-control" type="date" placeholder="Product Creation Date"
-                 [(ngModel)]="product.dateCreation"
-                 [ngModelOptions]="{standalone : true}"></div>
-      </div>
-      <div class="mb-3">
-        <label for="product-mdate">Product Modification Date</label>
-        <div class="input-group">
-          <input id="Product-mdate" class="form-control" type="date" placeholder="Product Modification Date"
-                 [(ngModel)]="product.dateDerniereModification"
+          <input id="Product-mdate" class="form-control" type="number" placeholder="Product Modification like"
+                 [(ngModel)]="product.nbrLike"
                  [ngModelOptions]="{standalone : true}"></div>
       </div>
     </form>

@@ -22,12 +22,12 @@ export class ProductsComponent implements OnInit {
     this.getAllProducts();
 
     this.product = {
-      idProduit: null,
-      codeProduit: null,
-      libelleProduit: null,
-      prix: null,
-      dateCreation: null,
-      dateDerniereModification: null
+      idProduit : null,
+      code : null,
+      libelle : null,
+      description : null,
+      nbrLike:null,
+      prixUnitaire:null,
 
     }
   }

@@ -21,12 +21,11 @@ export class FactureComponent implements OnInit {
   ngOnInit(): void {
     this.getAllFactures();
     this.facture = {
-      idFacture:null,
-      dateCreationFacture:null,
+      id:null,
+      dateFacture:null,
       montantFacture:null,
-      dateDerniereModificationFacture:null,
-      montantRemise:null,
-      archivee:null
+      libelle:null,
+
     }
   }
 

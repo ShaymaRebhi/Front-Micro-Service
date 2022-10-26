@@ -8,21 +8,17 @@
       <thead>
       <tr>
         <th>Id</th>
-        <th>Montant Remise</th>
         <th>Montant Facture</th>
-        <th>Date Creation Facture</th>
-        <th>Date Derniere Modification Facture</th>
-        <th>Archivée</th>
+        <th>Date  Facture</th>
+        <th>libelle</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor='let p of listFactures'>
-        <td>{{p.idFacture}}</td>
-        <td>{{p.montantRemise}}</td>
+        <td>{{p.id}}</td>
         <td>{{p.montantFacture}}</td>
-        <td>{{p.dateCreationFacture}}</td>
-        <td>{{p.dateDerniereModificationFacture}}</td>
-        <td>{{p.archivee}}</td>
+        <td>{{p.dateFacture}}</td>
+        <td>{{p.libelle}}</td>
       </tr>
       </tbody>
     </table>
@@ -36,13 +32,7 @@
   </div>
   <div class="modal-body">
     <form>
-      <div class="mb-3">
-        <label for="mr">Montant Remise</label>
-        <div class="input-group">
-          <input id="mr" class="form-control" type="number" placeholder="Montant Remise"
-                 [(ngModel)]="facture.montantRemise"
-                 [ngModelOptions]="{standalone : true}"></div>
-      </div>
+
       <div class="mb-3">
         <label for="mf">Montant Facture</label>
         <div class="input-group">
@@ -54,24 +44,17 @@
         <label for="cdate">Date Creation</label>
         <div class="input-group">
           <input id="cdate" class="form-control" type="date" placeholder="Creation Date"
-                 [(ngModel)]="facture.dateCreationFacture"
+                 [(ngModel)]="facture.dateFacture"
                  [ngModelOptions]="{standalone : true}"></div>
       </div>
+
       <div class="mb-3">
-        <label for="mdate">Date Modif</label>
+        <label for="libelle">libelle</label>
         <div class="input-group">
-          <input id="mdate" class="form-control" type="date" placeholder="Modif Date"
-                 [(ngModel)]="facture.dateDerniereModificationFacture"
+          <input id="libelle" class="form-control" type="text" placeholder="libelle"
+                 [(ngModel)]="facture.libelle"
                  [ngModelOptions]="{standalone : true}"></div>
-      </div>
-      <div class="mb-3">
-        <label for="archiv">Archivée</label>
-        <div class="input-group">
-          <select id="archiv" class="form-select" aria-label="Default select example" [(ngModel)]="facture.archivee" name="hi">
-            <option value="True">Oui</option>
-            <option value="False">Non</option>
-          </select>
-        </div>
+
       </div>
 
     </form>

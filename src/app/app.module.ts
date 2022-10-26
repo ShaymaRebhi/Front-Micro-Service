@@ -14,6 +14,8 @@ import { SecteurActiviteComponent } from './secteur-activite/secteur-activite.co
 import { OperateurComponent } from './operateur/operateur.component';
 import { FactureComponent } from './facture/facture.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import {SignupComponent} from "./signup/signup.component";
+import {LoginComponent} from "./login/login.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     SecteurActiviteComponent,
     OperateurComponent,
     FactureComponent,
-    NavbarComponent
+    NavbarComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

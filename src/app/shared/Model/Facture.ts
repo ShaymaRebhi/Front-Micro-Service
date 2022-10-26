@@ -1,8 +1,7 @@
 export class Facture {
-  idFacture: any
-  montantRemise:any
+  id: any
   montantFacture:any
-  dateCreationFacture:any
-  dateDerniereModificationFacture:any
-  archivee:any
+  dateFacture:any
+  libelle:any
+
 }

@@ -5,14 +5,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FactureService {
-  readonly API_URL = 'http://localhost:8089/SpringMVC/facture';
+  readonly API_URL = 'http://localhost:8092/api/factures';
 
   constructor(private httpClient: HttpClient) { }
 
   getAllFactures() {
-    return this.httpClient.get(`${this.API_URL}/retrieve-all-factures`)
+    return this.httpClient.get(`${this.API_URL}/retrieve-all`)
   }
   addFacture(facture : any) {
-    return this.httpClient.post(`${this.API_URL}/add-facture`, facture)
+    return this.httpClient.post(`${this.API_URL}`, facture)
   }
 }
